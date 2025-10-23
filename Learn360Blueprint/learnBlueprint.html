@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn360 – Azure Architecture BluePrint</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body class="bg-gradient-to-b from-blue-50 via-indigo-50 to-white text-gray-900 font-sans">
+  <!-- Header -->
+  <header class="text-center py-10 bg-gradient-to-r from-blue-700 to-indigo-700 text-white">
+    <h1 class="text-4xl font-bold">Learn360: Azure Architecture BluePrint</h1>
+    <p class="mt-2 text-lg opacity-90">Interactive visualization of the 5-layer cloud solution</p>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="space-y-20 py-12">
+
+    <!-- Layer 1 -->
+    <section class="max-w-6xl mx-auto text-center" id="layer1">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-8">Layer 1 – Identity & Access</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="icon-card">
+          <img src= "img/Microsoft_entra_id-removebg-preview.png" class="w-16 h-16" alt="Azure Entra ID">
+          <div class="tooltip">Handles identity, single sign-on (SSO), and access control.</div>
+          <p class="mt-2 font-medium">Azure Entra ID</p>
+        </div>
+
+        <div class="icon-card">
+          <img src="img/azure-active-directory.png" class="w-16 h-16" alt="Azure AD">
+          <div class="tooltip">Manages directory services and authentication policies.</div>
+          <p class="mt-2 font-medium">Azure Active Directory</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layer 2 -->
+    <section class="max-w-6xl mx-auto text-center" id="layer2">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-8">Layer 2 – Frontend + API Layer</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="icon-card">
+          <img src="img/Azure_front_door-removebg-preview.png" class="w-16 h-16" alt="Azure Front Door">
+          <div class="tooltip">Routing, global load balancing, and app acceleration.</div>
+          <p class="mt-2 font-medium">Azure Front Door</p>
+        </div>
+
+        <div class="icon-card">
+          <img src="img/Web_app-removebg-preview.png" class="w-16 h-16" alt="Azure Web App">
+          <div class="tooltip">Hosts web and API apps (React, Next.js, Java).</div>
+          <p class="mt-2 font-medium">Azure Web App</p>
+        </div>
+
+        <div class="icon-card">
+          <img src="img/Azure_API_Management-removebg-preview.png" class="w-16 h-16" alt="API Management">
+          <div class="tooltip">Controls API access, rate limits, and security.</div>
+          <p class="mt-2 font-medium">API Management</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layer 3 -->
+    <section class="max-w-6xl mx-auto text-center" id="layer3">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-8">Layer 3 – AI + App Logic</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="icon-card">
+          <img src="img/azure-machine-learning-removebg-preview.png" class="w-16 h-16" alt="Azure ML">
+          <div class="tooltip">Model training, prediction, and automation.</div>
+          <p class="mt-2 font-medium">Azure Machine Learning</p>
+        </div>
+
+        <div class="icon-card">
+          <img src="img/azure-cognitive-service-preview.png" class="w-16 h-16" alt="Cognitive Services">
+          <div class="tooltip">AI services for vision, speech, and language.</div>
+          <p class="mt-2 font-medium">Azure Cognitive Services</p>
+        </div>
+
+        <div class="icon-card">
+          <img src="img/openai-removebg-preview.png" class="w-16 h-16" alt="OpenAI">
+          <div class="tooltip">Generative AI for chat, summarization, and insight.</div>
+          <p class="mt-2 font-medium">Azure OpenAI</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layer 4 -->
+    <section class="max-w-6xl mx-auto text-center" id="layer4">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-8">Layer 4 – Data + Analytics</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="icon-card">
+          <img src="img/Azure_SQL_db_remove.png" class="w-16 h-16" alt="SQL">
+          <div class="tooltip">Relational database for structured data.</div>
+          <p class="mt-2 font-medium">Azure SQL Database</p>
+        </div>
+
+        <div class="icon-card">
+          <img src="img/Azure_cosmos_db_preview.png" class="w-16 h-16" alt="Cosmos DB">
+          <div class="tooltip">Globally distributed NoSQL data.</div>
+          <p class="mt-2 font-medium">Azure Cosmos DB</p>
+        </div>
+
+        <div class="icon-card">
+          <img src="img/Power bi_preview.png" class="w-16 h-16" alt="Power BI">
+          <div class="tooltip">Interactive dashboards and visual analytics.</div>
+          <p class="mt-2 font-medium">Power BI</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layer 5 -->
+    <section class="max-w-6xl mx-auto text-center" id="layer5">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-8">Layer 5 – Security, Monitoring & Governance</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="icon-card">
+          <img src="img/mirosoft-azure-defender-for-cloud-removebg-preview.png" class="w-16 h-16" alt="Defender for Cloud">
+          <div class="tooltip">Threat protection and secure posture management.</div>
+          <p class="mt-2 font-medium">Azure Defender</p>
+        </div>
+
+        <div class="icon-card">
+          <img src="img/azure-monitor-removebg-preview.png" class="w-16 h-16" alt="Azure Monitor">
+          <div class="tooltip">Real-time performance insights and alerts.</div>
+          <p class="mt-2 font-medium">Azure Monitor</p>
+        </div>
+
+        <div class="icon-card">
+          <img src="img/azure-policy-removebg-preview.png" class="w-16 h-16" alt="Azure Policy">
+          <div class="tooltip">Governance, compliance, and cost control.</div>
+          <p class="mt-2 font-medium">Azure Policy</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Downloads Section -->
+<section class="max-w-5xl mx-auto text-center my-20 px-4">
+  <h2 class="text-2xl font-semibold text-blue-700 mb-6">📂 Download Learn360 Resources</h2>
+  <p class="text-gray-700 mb-8">
+    Download the detailed presentation slides and full A2 poster version of the Learn360 Azure Architecture.
+  </p>
+
+  <div class="flex flex-wrap justify-center gap-6">
+    <!-- Slides Download -->
+    <a href="Learn360_ArchitectureBluePrint_KhutjoSatekge_slides.pdf" download
+      class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl shadow-md transition-all hover:scale-105">
+      📘 Download Slides (PDF)
+    </a>
+
+    <!-- Poster Download -->
+    <a href="Learn360_ArchitectureBluePrint_KhutjoSatekge.pdf" download
+      class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl shadow-md transition-all hover:scale-105">
+      🖼️ Download Poster (A2 PDF)
+    </a>
+  </div>
+
+  <p class="text-sm text-gray-500 mt-6">
+    *These resources summarize all 5 layers of the Learn360 Azure solution with visuals and flow diagrams.*
+  </p>
+</section>
+
+  <footer class="text-center py-8 bg-gray-100 text-gray-700 text-sm">
+    © 2025 Learn360 | Designed by Khutjo Satekge
+  </footer>
+</body>
+</html>

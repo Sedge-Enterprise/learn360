@@ -1,0 +1,160 @@
+/* ===== FUTURISTIC LEARN360 THEME ===== */
+
+/* Global styles */
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #e5edff;
+  background: radial-gradient(circle at top, #0f172a 0%, #1e293b 60%, #0a0e1a 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Icon Card */
+.icon-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+  cursor: pointer;
+  width: 9rem;
+  transition: all 0.35s ease;
+}
+
+.icon-card:hover {
+  transform: translateY(-6px) scale(1.07);
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.55);
+  border-color: rgba(129, 140, 248, 0.7);
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  bottom: 110%;
+  width: 14rem;
+  font-size: 0.875rem;
+  color: #f8fafc;
+  background: rgba(30, 58, 138, 0.9);
+  border: 1px solid rgba(147, 197, 253, 0.3);
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  opacity: 0;
+  transform: translateY(5px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(30, 64, 175, 0.5);
+}
+
+.icon-card:hover .tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image glow effect */
+.icon-card img {
+  filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.5));
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.icon-card:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 12px rgba(99, 102, 241, 0.8));
+}
+
+/* Text inside cards */
+.icon-card p {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+/* Header & Section titles */
+h1, h2 {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 1px;
+}
+
+h1 {
+  text-shadow: 0 0 10px rgba(147, 197, 253, 0.4);
+}
+
+h2 {
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+/* Download buttons */
+a[download] {
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+}
+
+a[download]:hover {
+  background: linear-gradient(90deg, #6366f1, #3b82f6);
+  box-shadow: 0 0 25px rgba(147, 197, 253, 0.6);
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  background: rgba(15, 23, 42, 0.7);
+  color: #94a3b8;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Subtle floating animation for icons */
+@keyframes floaty {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0px); }
+}
+
+.icon-card img {
+  animation: floaty 3s ease-in-out infinite;
+}
+
+/* Optional: Glow accent for hover focus */
+.icon-card:hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at center, rgba(99, 102, 241, 0.25), transparent 70%);
+  z-index: 0;
+}
+/* ===== Fix: Make icon labels visible and balanced ===== */
+
+.icon-card p {
+  margin-top: 0.6rem;
+  font-weight: 600;
+  color: #e2e8f0; /* Light neutral text color */
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.4); /* Soft azure glow */
+  letter-spacing: 0.3px;
+  font-size: 0.95rem;
+}
+
+/* Optional: stronger glow for better readability on bright backgrounds */
+.icon-card:hover p {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(99, 102, 241, 0.9), 0 0 20px rgba(147, 197, 253, 0.6);
+}
