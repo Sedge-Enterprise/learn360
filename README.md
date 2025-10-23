@@ -62,16 +62,16 @@ Service Justification Table aligned to Learn360’s architecture:
 | **Phase 5** | Power BI Dashboard Integration                    | AI analytics, reporting, and user insights dashboard                |
 
 🚀 Deployment Instructions
-# Clone the repo
+ Clone the repo
 git clone https://github.com/Sedge-Enterprise/learn360.git
 
-# Open project folder
+ Open project folder
 cd learn360
 
-# Install dependencies
+ Install dependencies
 npm install
 
-# Run local dev server
+ Run local dev server
 npm run dev
 
 Azure Deployment:
