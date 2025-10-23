@@ -1,19 +1,19 @@
-🧠 # Learn360 
+🧠  Learn360 
 
 Learn360 is Sedge Enterprise’s intelligent learning and upskilling platform — a cloud-powered system that merges AI-driven skill mapping, data analytics, and personalized learning experiences for individuals and organizations.
 
-##🧭 Project Overview
+🧭 Project Overview
 
 Learn360 delivers interactive, data-driven learning intelligence using Azure-native architecture.
 - It helps learners, educators, and organizations visualize growth, measure skills, and automate development plans through AI, Power BI, and serverless automation.
 
-###Key Features:
+Key Features:
 🎓 Personalized learning journeys
 📊 Analytics dashboards powered by Power BI
 ⚙️ Automated assessments & progress tracking
 🔗 Integration with Microsoft Learn
 
-##🧱 Azure Architecture Blueprint
+🧱 Azure Architecture Blueprint
 | Layer                   | Services                                    | Purpose                                         |
 | ----------------------- | ------------------------------------------- | ----------------------------------------------- |
 | **Frontend**            | Azure Static Web Apps, Azure CDN            | Deliver the Learn360 portal and UI              |
@@ -23,7 +23,7 @@ Learn360 delivers interactive, data-driven learning intelligence using Azure-nat
 | **Identity & Security** | Azure AD, Key Vault                         | Manage secure access and authentication         |
 | **Monitoring**          | Azure Monitor, App Insights                 | Track system performance and learning analytics |
 
-##🔐 Identity & Access Management
+🔐 Identity & Access Management
 
 - Azure Active Directory (AAD) SSO integration
 - Role-Based Access Control (RBAC) for admin, learner, and instructor roles
@@ -31,9 +31,9 @@ Learn360 delivers interactive, data-driven learning intelligence using Azure-nat
 - Secrets stored in Azure Key Vault
 - Conditional access policies for compliance
 
-##💰 Cost Strategy
+💰 Cost Strategy
 
-Service Justification Table (Deliverable 2) aligned to Learn360’s architecture:
+Service Justification Table aligned to Learn360’s architecture:
 
 | Azure Service      | Tier        | Function                             | Notes                            |
 | ------------------ | ----------- | ------------------------------------ | -------------------------------- |
@@ -44,7 +44,7 @@ Service Justification Table (Deliverable 2) aligned to Learn360’s architecture
 | Azure AD           | Premium P1  | Identity and access control          | Role-based learning access       |
 | Azure Storage      | Hot Blob    | Stores course files and media        | Integrated with CDN              |
 
-##🧩 Core Modules
+🧩 Core Modules
 
 - AI-Powered Learning Paths – Adaptive course recommendations
 - Course Management Dashboard – Admins can create, assign, and track
@@ -52,7 +52,7 @@ Service Justification Table (Deliverable 2) aligned to Learn360’s architecture
 - Assessment Engine – Skill validation and testing
 - Onboarding & Certification – Seamless learner integration
 
-##🗺 Roadmap
+🗺 Roadmap
 | Phase       | Goal                                              | Deliverable                                                         |
 | ----------- | ------------------------------------------------- | ------------------------------------------------------------------- |
 | **Phase 1** | Develop full Azure Architecture Blueprint         | Layered Azure diagram (A2 Poster + Interactive Site)                |
@@ -74,18 +74,18 @@ npm install
 # Run local dev server
 npm run dev
 
-###Azure Deployment:
+Azure Deployment:
 
 - Deploy frontend to Azure Static Web Apps
 - Backend via Azure Functions
 - Database with Azure SQL
 - Dashboards integrated using Power BI Embedded
 
-##🧭 AI Roadmap Visual
+🧭 AI Roadmap Visual
 
-##🧩 AI Roadmap – Learn360 Growth Journey
+🧩 AI Roadmap – Learn360 Growth Journey
 
-###Each phase color aligns with your Azure architecture layers:
+Each phase color aligns with your Azure architecture layers:
 
 🟦 Layer 1: Identity & Access
 🟩 Layer 2: Frontend & API
@@ -95,18 +95,18 @@ npm run dev
 
 Visualize progress flow — from architecture → justification → backend → frontend → insights.
 
-##✨ Vision
+✨ Vision
 
 Learn360 empowers continuous skill growth for individuals and teams through structured, cloud-based learning intelligence.
 
 Inspired by the success of platforms like roadmap.sh and Microsoft Learn, Learn360 blends data, AI, and education to create guided learning journeys that adapt to each learner’s goals.
 
-##Our mission:
+Our mission:
 🔹 Help individuals map their skills
 🔹 Help organizations measure capability growth
 🔹 Help everyone grow smarter — one insight at a time
 
-##📄 License
+00📄 License
 
 This project is licensed under the MIT License.
 See the LICENSE file for details.
