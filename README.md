@@ -20,12 +20,12 @@ Key Features:
 | **Backend**             | Azure Functions, Logic Apps                 | Manage events, triggers, and integrations       |
 | **Database**            | Azure SQL, Blob Storage                     | Store learner data and training content         |
 | **AI & Analytics**      | Azure Cognitive Services, Power BI Embedded | Generate insights and personalized dashboards   |
-| **Identity & Security** | Azure AD, Key Vault                         | Manage secure access and authentication         |
+| **Identity & Security** | Microsoft Entra ID, Key Vault               | Manage secure access and authentication         |
 | **Monitoring**          | Azure Monitor, App Insights                 | Track system performance and learning analytics |
 
 🔐 Identity & Access Management
 
-- Azure Active Directory (AAD) SSO integration
+- Microsoft Entra ID SSO integration
 - Role-Based Access Control (RBAC) for admin, learner, and instructor roles
 - Multi-Factor Authentication (MFA) enforcement
 - Secrets stored in Azure Key Vault
