@@ -1,0 +1,16 @@
+Learn360 Azure Service Plan,,,,,
+Azure Service,Tier/SKU,Function,Est. monthly Cost,Note,
+Azure App Service (Web App),Basic,Hosts the Learn360 front-end web app (React/Next.js) and backend API (Java).,$54.75,For testing and learning,
+Azure SQL Database,Basic ,"Stores user profiles, content metadata, and learning progress.",$372.97,Linked to Power BI for analytics dashboards.,
+Azure Storage Accounts (Blob),Hot Tier (100 GB),"Stores PDFs, slides, video lectures, and uploaded course files.",$21.84,Cost depends on content storage size.,
+"Azure AI services
+ (Cognitive Service)",Standard (Pay-as-you-go),"Provides vision, speech, and language AI for content tagging and summarization.",$0.00,,
+Azure OpenAI Service,GPT-4 (Pay-as-you-go),"Powers adaptive chat, summaries, and intelligent tutoring.",$0.00,,
+Azure Functions,Consumpton Plan,"Runs background triggers (e.g., learning completion notifications).",$0.00,,
+Azure Machine Learning,Basic Workspace,Personalizes recommendations and adaptive learning logic.,$167.17,,
+Azure Monitor,Standard,Tracks app performance and logs across all layers.,$0.00,Includes Log Analytics workspace.,
+Azure Defender for Cloud,Free (Basic),Provides basic threat protection and security alerts.,$0.00,Upgradeable to Standard tier if needed.,
+Azure Policy,Basic ,Manages governance and compliance for the Learn360 environment.,$6.00,Integrated with Azure Monitor.,
+,,,,,
+,,,$622.73,,R 10 784.03
+,,,,,
