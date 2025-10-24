@@ -33,16 +33,19 @@ Key Features:
 
 💰 Cost Strategy
 
-Service Justification Table aligned to Learn360’s architecture:
-
-| Azure Service      | Tier        | Function                             | Notes                            |
-| ------------------ | ----------- | ------------------------------------ | -------------------------------- |
-| Azure App Service  | Basic (B1)  | Hosts Learn360 web app               | Scalable to S1 for production    |
-| Azure SQL Database | Basic       | Stores learner profiles and progress | Linked to Power BI for analytics |
-| Azure Functions    | Consumption | Runs AI automation tasks             | Event-driven execution           |
-| Power BI Embedded  | A1          | Displays dashboards                  | For advanced analytics           |
-| Azure AD           | Premium P1  | Identity and access control          | Role-based learning access       |
-| Azure Storage      | Hot Blob    | Stores course files and media        | Integrated with CDN              |
+Service Justification Table aligned to Learn360’s architecture: 
+| **Azure Service**             | **Tier/SKU**     | **Function**                                                         | **Notes** |
+|-------------------------------|------------------|----------------------------------------------------------------------|-----------------------------|
+| Azure App Service (Web App)   | Basic            | Hosts the Learn360 front-end (React/Next.js) and backend API (Java). | For testing and learning |
+| Azure SQL Database            | Basic            | Stores user profiles, content metadata, and learning progress. | Linked to Power BI for analytics dashboards |
+| Azure Storage Accounts (Blob) | Hot Tier         | Stores PDFs, slides, and uploaded course files. | Cost depends on content storage size |
+| Azure AI Services (Cognitive) | Standard (PAYG)  | Provides vision, speech, and language AI for tagging and summarization. | Pay-as-you-go model |
+| Azure OpenAI Service          | GPT-4 (PAYG)     | Powers adaptive chat, summaries, and intelligent tutoring. | Pay-as-you-go model |
+| Azure Functions               | Consumption Plan | Runs background triggers (e.g., completion notifications). | | Scales automatically |
+| Azure Machine Learning        | Basic Workspace  | Personalizes recommendations and adaptive learning logic. | Core AI workspace |
+| Azure Monitor                 | Standard         | Tracks app performance and logs. | Includes Log Analytics workspace |
+| Azure Defender for Cloud      | Free (Basic)     | Provides basic threat protection. | Upgradeable to Standard tier |
+| Azure Policy                  | Basic            | Manages governance and compliance. | Integrated with Azure Monitor |
 
 🧩 Core Modules
 
