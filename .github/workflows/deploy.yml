@@ -1,0 +1,70 @@
+name: Learn360 CI/CD
+
+# Triggers: push to main branch
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    # Runs on Ubuntu runner (fast, cross-platform, Azure CLI and Node support).
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # --- Frontend build (Node / React / Next.js)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install frontend dependencies
+        working-directory: ./frontend
+        run: |
+          npm ci
+
+      - name: Build frontend
+        working-directory: ./frontend
+        run: |
+          npm run build
+
+      # --- (Optional) Backend build step (Java example)
+      - name: Set up Java (if using Java backend)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Build backend (if present)
+        if: exists('./api/pom.xml') || exists('./api/build.gradle')
+        working-directory: ./api
+        run: |
+          # Maven or Gradle detected; run appropriate build
+          if [ -f "pom.xml" ]; then mvn -B package -DskipTests; fi
+          if [ -f "build.gradle" ]; then ./gradlew assemble -x test; fi
+
+      # --- Deploy frontend to Azure App Service using publish profile
+      - name: Deploy frontend to Azure Web App
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: 'learn360-web'             # replace with your App Service name
+          slot-name: 'production'
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+          package: './frontend/out'            # adjust to your build output (e.g., ./frontend/build or ./frontend/out)
+
+      # --- Post-deploy: optional health check
+      - name: Wait for site to respond
+        run: |
+          URL="https://learn360-web.azurewebsites.net"   # replace with your app URL
+          for i in {1..15}; do
+            status=$(curl -s -o /dev/null -w "%{http_code}" $URL || true)
+            echo "HTTP status: $status"
+            if [ "$status" = "200" ]; then echo "Site is up"; exit 0; fi
+            sleep 5
+          done
+          echo "Site did not respond with 200 after timeout" && exit 1
